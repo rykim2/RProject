@@ -1,9 +1,6 @@
 library(dplyr)
 library(ggplot2)
 
-costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv", 
-                         header = TRUE)
-
 ##Darianne's path
 # costOfLiving <- read.csv("/Users/drl0110/Dropbox/Movehub GUI Final Project/movehubcostofliving.csv", header = TRUE)
 
