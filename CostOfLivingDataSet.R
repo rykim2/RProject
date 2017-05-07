@@ -21,6 +21,8 @@ vec <- as.vector(final.costOfLiving$City)
 # WORKS! WORKS! WORKS! WORKS! WORKS!
 graphDensity <- function(Comparevar, colorz, city1, city2){
   
+  partitionData <- cbind(final.costOfLiving["City"], final.costOfLiving[Comparevar])
+
   getValue1 <- function(city1) {
     cityInfo1 <- partitionData[which(partitionData == city1), ]
     cityInfo1[[2]]
