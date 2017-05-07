@@ -18,7 +18,6 @@ coliv.adjusted <- as.data.frame(lapply(costOfLiving[,2:7], poundsToDollars))
 
 #adjusted to the right US currency
 final.costOfLiving <- cbind(City = costOfLiving$City, coliv.adjusted)
-final.costOfLiving <- arrange(final.costOfLiving, City)
 vec <- as.vector(final.costOfLiving$City)
 
 #------------------------------------ANOTHER WAY ATTEMPT ----------------------------------------------------------
