@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 
-costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProj/rykim2-patch-1/Shiny/RProj/movehubcostofliving.csv", 
+costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv", 
                          header = TRUE)
 
 ##Darianne's path
