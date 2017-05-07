@@ -1,7 +1,7 @@
 library(ggplot2)
 library(shiny)
-costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProj/rykim2-patch-1/Shiny/RProj/movehubcostofliving.csv")
-source("https://raw.githubusercontent.com/rykim2/RProj/master/CostOfLivingDataSet.R")
+costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv")
+source("https://github.com/rykim2/RProject/blob/master/CostOfLivingDataSet.R")
  
 shinyServer(
   function(input, output) {
