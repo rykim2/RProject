@@ -26,6 +26,7 @@ graphDensity <- function(Comparevar, colorz, city1, city2){
     cityInfo1[[2]]
   }
   
+  
   getValue2 <- function(city2){
     cityInfo2 <- partitionData[which(partitionData == city2), ]
     cityInfo2[[2]]
@@ -41,4 +42,4 @@ graphDensity <- function(Comparevar, colorz, city1, city2){
   
 }
 
-graphDensity("Gasoline", "blue", "Geneva", "Honolulu")
+graphDensity("Gasoline", "blue", "San Francisco", "Honolulu")
