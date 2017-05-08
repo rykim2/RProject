@@ -30,13 +30,11 @@ shinyServer(
 
     graph <- function(input1){
       ggplot(final.costOfLiving, aes(final.costOfLiving[[as.numeric(input$radio)]])) +
-        geom_density(color = "pink", fill = "pink")
-        # geom_vline(xintercept =  , color = "red") +
-        # geom_vline(xintercept = city2, color = "yellow")
+        geom_density(color = "pink", fill = "pink") +
+        geom_vline(xintercept = values()[1]  , color = "red") +
+        geom_vline(xintercept = values()[2], color = "yellow")
       
     }
-    
-    
     graphMe <- reactive(graph(input$radio))
         
     output$plot1 <- renderPlot({
