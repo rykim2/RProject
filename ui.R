@@ -11,23 +11,21 @@ shinyUI(fluidPage(
       selectInput(inputId = "selectBar2", "Compare: City 2", 
                   choices = c(vec), selected = "Honolulu"),
       
-      sliderInput(inputId = "slider", label = "Range of Interest:", 
-                  min = 0, max = 100, value = c(0,100)),
-      
       radioButtons(inputId = "radio", label = h2("Know your numbers"),
-                         choices = list("Cappuccino" = 1, 
-                                        "Cinema" = 2, 
-                                        "Wine" = 3,
-                                        "Gasoline" = 4, 
-                                        "Average Rent" = 5, 
-                                        "Average Disposable Income" = 6), selected = 3)
+                         choices = list("Cappuccino" = 2, 
+                                        "Cinema" = 3, 
+                                        "Wine" = 4,
+                                        "Gasoline" = 5, 
+                                        "Average Rent" = 6, 
+                                        "Average Disposable Income" = 7), selected = 3)
       ),
     mainPanel(
-      h1("Introducing Shiny"),
+      h1("Know Your City"),
       textOutput("text1"),
       textOutput("text2"),
       textOutput("text3"),
-      textOutput("text4")
+      textOutput("text4"),
+      plotOutput("plot1")
     )
 ))
 
