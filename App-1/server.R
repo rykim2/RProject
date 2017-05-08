@@ -16,11 +16,11 @@ shinyServer(
 
     
     output$text1 <- renderText({ 
-      paste("You have selected", input$selectBar)
+      paste("You have selected:", input$selectBar)
     })
     
     output$text2 <- renderText({
-      paste("You have selected", input$selectBar2)
+      paste("You have selected:", input$selectBar2)
     })
 
     graph <- function(input1, input2, input3){
@@ -41,9 +41,14 @@ shinyServer(
         
     output$plot1 <- renderPlot({
       graphMe()
-
-      
     })
-
+    
+    output$info1 <- renderText({
+      paste(input$selectBar, "is --- out of --- place in the best city to buy -- from")
+    })
+    output$info2 <- renderText({
+      paste(input$selectBar2, "is --- out of --- place in the best city to buy -- from")
+    })
+  
   }
 )

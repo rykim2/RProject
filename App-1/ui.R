@@ -23,7 +23,9 @@ shinyUI(fluidPage(
       h1("Know Your City"),
       textOutput("text1"),
       textOutput("text2"),
-      plotOutput("plot1")
+      plotOutput("plot1"),
+      textOutput("info1"),
+      textOutput("info2")
     )
 ))
 
