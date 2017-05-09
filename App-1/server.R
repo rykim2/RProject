@@ -58,7 +58,7 @@ shinyServer(
       paste(input$selectBar, ": ", "$",values()[1], ". ", sep = "")
     })
     output$info1.2 <- renderText({
-      paste(input$selectBar, " is ", price.rank1()[1]," out of 216 place in the best city to buy ", 
+      paste(input$selectBar, " is ", price.rank1()[1]," out of 216 place in the best city for ", 
             price.rank1()[2], sep = "")
       
     })
@@ -66,7 +66,7 @@ shinyServer(
       paste(input$selectBar2, ": ", "$",values()[2], ". ", sep = "")
     })
     output$info2.2 <- renderText({
-      paste(input$selectBar2, " is ", price.rank2()[1]," out of 216 place in the best city to buy ", 
+      paste(input$selectBar2, " is ", price.rank2()[1]," out of 216 place in the best city for ", 
             price.rank2()[2], sep = "")
     })
     
