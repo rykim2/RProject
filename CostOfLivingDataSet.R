@@ -8,3 +8,4 @@ coliv.adjusted <- as.data.frame(lapply(costOfLiving[,2:7], poundsToDollars))
 final.costOfLiving <- cbind(City = costOfLiving$City, coliv.adjusted)
 vec <- as.vector(final.costOfLiving$City)
 
+vec <- sort(vec, decreasing = FALSE)
