@@ -45,6 +45,9 @@ shinyServer(
     
     p.order <- function(radio, city){
       temp <- c(order(final.costOfLiving[as.numeric(radio)], decreasing = F))
+        if (radio == 7){
+          temp <- c(order(final.costOfLiving[as.numeric(radio)], decreasing = T))
+        }
       index <- which(final.costOfLiving$City == city)
       col <- noquote(names(final.costOfLiving[as.numeric(radio)]))
       result <- c(match(index,temp), col)
@@ -69,6 +72,8 @@ shinyServer(
       paste(input$selectBar2, " is ", price.rank2()[1]," out of 216 place in the best city for ", 
             price.rank2()[2], sep = "")
     })
+    
+    
     
     
   
