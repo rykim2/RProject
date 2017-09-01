@@ -30,9 +30,10 @@ shinyUI(fluidPage(
       ),
     mainPanel(
       fluidRow(
-        splitLayout(cellWidths = c("50%", c("25%", "25%")), img(src = "seattle.jpg", height = "200", width = "600"), 
-                    img(src = "hawaii.jpg", height = "200", width = "200"), 
-                    img(src = "japaneseTea.jpg", height = "200", width = "200"))
+        splitLayout(cellWidths = c("50%", c("25%", "25%")), 
+                    img(src = "https://raw.githubusercontent.com/rykim2/RProject/master/www/seattle.jpg", height = "200", width = "600"), 
+                    img(src = "https://raw.githubusercontent.com/rykim2/RProject/master/www/hawaii.jpg", height = "200", width = "200"), 
+                    img(src = "https://raw.githubusercontent.com/rykim2/RProject/master/www/japaneseTea.jpg", height = "200", width = "200"))
       ),
       h1("Know Your City"),
       textOutput("text1"),
