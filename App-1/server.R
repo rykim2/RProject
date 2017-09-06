@@ -1,7 +1,12 @@
 library(ggplot2)
 library(shiny)
-costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv")
-source("https://raw.githubusercontent.com/rykim2/RProject/master/CostOfLivingDataSet.R")
+
+poundsToDollars <- function(x) x * 1.25
+
+coliv.adjusted <- as.data.frame(lapply(costOfLiving[,2:7], poundsToDollars))
+
+final.costOfLiving <- cbind(City = costOfLiving$City, coliv.adjusted)
+
 shinyServer(
   function(input, output) {
     
