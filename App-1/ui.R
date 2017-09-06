@@ -6,10 +6,10 @@ shinyUI(fluidPage(
       helpText("Select the which city you would like to explore."),
       
       selectInput(inputId = "selectBar", "Compare: City 1", 
-                  choices = c(vec), selected = "San Francisco"),
+                  choices = sort(costOfLiving$City), selected = "San Francisco"),
       
       selectInput(inputId = "selectBar2", "Compare: City 2", 
-                  choices = c(vec), selected = "Honolulu"),
+                  choices = sort(costOfLiving$City) , selected = "Honolulu"),
       
       radioButtons(inputId = "radio", label = h2("Know your numbers"),
                          choices = list("Cappuccino" = 2, 
