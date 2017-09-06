@@ -1,6 +1,8 @@
 library(ggplot2)
 library(shiny)
 
+costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv")
+
 poundsToDollars <- function(x) x * 1.25
 
 coliv.adjusted <- as.data.frame(lapply(costOfLiving[,2:7], poundsToDollars))
