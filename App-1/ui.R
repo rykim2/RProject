@@ -1,5 +1,7 @@
 # Define UI for application that draws a histogram
 library(shiny)
+costOfLiving <- read.csv("https://raw.githubusercontent.com/rykim2/RProject/master/movehubcostofliving.csv")
+
 shinyUI(fluidPage(
   titlePanel("Learn. Explore. Live."),
     sidebarPanel(
